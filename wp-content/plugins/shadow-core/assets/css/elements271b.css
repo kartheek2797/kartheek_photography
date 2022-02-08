@@ -1,0 +1,1220 @@
+/** 
+ * Author: Shadow Themes
+ * Author URL: http://shadow-themes.com
+ */
+.shadowcore-widget-holder {
+    min-height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.shadowcore-widget-holder i {
+    font-size: 48px;
+    line-height: 48px;
+}
+.shadowcore-widget-holder span {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.shadowcore-pswp-media--video,
+.shadowcore-pswp-media--iframe {
+	position: absolute;
+	overflow: hidden;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.shadowcore-pswp-media--video video,
+.shadowcore-pswp-media--iframe iframe {
+	width: 100%;
+	height: 100%;
+	pointer-events: all;
+	will-change: transform, opacity;
+	transition: transform 0.3s, opacity 0.3s;
+	opacity: 0;
+	transform: scale(0.75);
+	position: absolute;
+	left: 0;
+	top: 0;
+	border: none;
+}
+.shadowcore-pswp-media--video.is-inview video,
+.shadowcore-pswp-media--iframe.is-inview iframe {
+	opacity: 1;
+	transform: scale(1);
+}
+.shadowcore-pswp-image-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: all;
+}
+.shadowcore-pswp-image-wrap img {
+	position: static;
+	pointer-events: none;
+}
+
+/* 01. COUNTDOWN
+   -------------- */
+.shadowcore-coming-soon {
+	display: flex;
+	flex-direction: row;
+}
+.shadowcore-coming-soon > div {
+	width: 25%;
+	text-align: center;
+}
+.shadowcore-coming-soon .shadowcore-coming-soon__count {
+	font-size: 80px;
+	line-height: 85px;
+	margin: 0 0 0 0;
+}
+.shadowcore-coming-soon .shadowcore-coming-soon__label {
+	display: none;
+	text-transform: uppercase;
+}
+.shadowcore-labels-state--yes .shadowcore-coming-soon .shadowcore-coming-soon__label {
+	display: block;
+}
+.shadowcore-coming-soon time {
+	display: none;
+}
+
+/* 02. CIRCLE PROGRESS BAR
+   ------------------------ */
+.shadowcore-progress-item {
+	text-align: center;
+}
+.shadowcore-progress-item-wrap svg {
+	display: block;
+	margin: 0 auto;
+}
+.shadowcore-progress-item-wrap {
+	position: relative;
+	display: block;
+	padding: 0 60px;
+	stroke-width: 5px;
+}
+.shadowcore-progress-counter {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	transform: translateX(5px);
+}
+.shadowcore-progress-counter:after {
+    content: '%';
+}
+.shadowcore-progress-item-wrap svg circle.shadowcore-progress-circle--bar {
+	stroke-linecap: round;
+	transition: stroke-dashoffset 3s ease-in-out;
+}
+.shadowcore-progress-state--yes .shadowcore-progress-counter {
+	display: flex;
+}
+.shadowcore-progress-label {
+	display: block;
+}
+
+/* 03. INFO CARD
+   ------------- */
+.shadowcore-service-card-grid {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.shadowcore-service-card {
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-grid-column--1 .shadowcore-service-card {
+	width: 100%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--2 .shadowcore-service-card {
+	width: 50%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--3 .shadowcore-service-card {
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--4 .shadowcore-service-card {
+	width: 25%;
+	box-sizing: border-box;
+}
+.shadowcore-swap-cotent--yes .shadowcore-service-card {
+	flex-direction: column-reverse;
+}
+.shadowcore-service-card__head {
+	display: flex;
+	position: relative;
+	z-index: 3;
+}
+.shadowcore-infocard-layout--horizontal .shadowcore-service-card__head {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-items: flex-start;
+	align-items: center;
+	align-items: flex-end;
+}
+.shadowcore-infocard-layout--horizontal.shadowcore-swap-head--yes .shadowcore-service-card__head {
+	flex-direction: row-reverse;
+}
+
+.shadowcore-infocard-layout--vertical .shadowcore-service-card__head {
+	flex-direction: column;
+	align-items: center;
+}
+.shadowcore-infocard-layout--vertical.shadowcore-swap-head--yes .shadowcore-service-card__head {
+	flex-direction: column-reverse;
+}
+.shadowcore-service-card__head img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+.shadowcore-service-card__image {
+	max-width: 100%;
+}
+.shadowcore-service-card__label span {
+	display: none;
+}
+.shadowcore-service-card__label span:last-child {
+	display: block;
+}
+.shadowcore-caption-above--yes .shadowcore-service-card__label span:first-child {
+	display: block;
+}
+.shadowcore-caption-above--yes .shadowcore-service-card__label span:last-child {
+	display: none;
+}
+.shadowcore-service-card__link > a {
+	transition: color 0.3s, border 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+/* 04. SIMPLE BLOG
+   --------------- */
+.elementor-editor-active .shadowcore-blog-listing a {
+	pointer-events: none;
+}
+
+/* 05. TESTIMONIALS GRID
+   --------------------- */
+.shadowcore-grid-column--1 .shadowcore-testimonials-item {
+	width: 100%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--2 .shadowcore-testimonials-item {
+	width: 50%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--3 .shadowcore-testimonials-item {
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--4 .shadowcore-testimonials-item {
+	width: 25%;
+	box-sizing: border-box;
+}
+.shadowcore-testimonials-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.shadowcore-testimonials-item {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-testimonials-grid .shadowcore-testimonials-item__author {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	z-index: 3;
+}
+.shadowcore-testimonials-grid .shadowcore-testimonials-item__author img {
+	display: block;
+}
+.shadowcore-swap-cotent--yes .shadowcore-testimonials-item {
+	flex-direction: column-reverse;
+}
+.shadowcore-testimonials-item__author {
+	display: flex;
+	position: relative;
+	z-index: 3;
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__author {
+	margin-left: auto;
+	margin-right: auto;
+}
+.shadowcore-testimonials-layout--horizontal .shadowcore-testimonials-item__author {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	align-items: flex-start;
+	align-items: center;
+	align-items: flex-end;
+}
+.shadowcore-testimonials-layout--horizontal.shadowcore-swap-head--yes .shadowcore-testimonials-item__author {
+	flex-direction: row-reverse;
+}
+.shadowcore-testimonials-layout--vertical .shadowcore-testimonials-item__author {
+	flex-direction: column;
+	align-items: center;
+}
+.shadowcore-testimonials-layout--vertical.shadowcore-swap-head--yes .shadowcore-testimonials-item__author {
+	flex-direction: column-reverse;
+}
+.shadowcore-testimonials-item__author--name span {
+	display: none;
+}
+.shadowcore-testimonials-item__author--name span:last-child {
+	display: block;
+}
+.shadowcore-op-above--yes .shadowcore-testimonials-item__author--name span:first-child {
+	display: block;
+}
+.shadowcore-op-above--yes .shadowcore-testimonials-item__author--name span:last-child {
+	display: none;
+}
+.shadowcore-testimonials-item__content {
+	display: flex;
+}
+
+/* 05. TESTIMONIALS CAROUSEL
+   ------------------------- */
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item {
+	cursor: grab;
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__content p:first-child:before,
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__content p:last-child:after {
+	display: inline;
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__content p:first-child:before {
+	content: '\201c';
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__content p:last-child:after {
+	content: '\201d';
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__author {
+	position: relative;
+	display: inline-flex;
+}
+.shadowcore-testimonials-carousel .shadowcore-testimonials-item__author--name {
+	position: relative;
+	z-index: 3;
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-owl-container .owl-dots {
+	text-align: center;
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+}
+.shadowcore-testimonials-carousel .owl-dots button.owl-dot {
+	width: 10px;
+	height: 10px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 10px;
+}
+.shadowcore-testimonials-carousel .owl-dots button.owl-dot span {
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #ffffff;
+	opacity: 0.25;
+	transition: opacity 0.3s, transform 0.3s, background 0.3s, border 0.3s;
+}
+.shadowcore-testimonials-carousel .owl-dots button.owl-dot:hover span {
+	opacity: 0.5;
+}
+.shadowcore-testimonials-carousel .owl-dots button.owl-dot.active span {
+	opacity: 0.75;
+    transform: scale(1.2);
+}
+
+/* 06. BEFORE AND AFTER
+   -------------------- */
+.shadowcore-before-after {
+	position: relative;
+	overflow: hidden;
+	cursor: grab;
+}
+.shadowcore-before-after img {
+	display: block;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+}
+.shadowcore-before-after div.shadowcore-before-after-img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: no-repeat center;
+	background-size: cover;
+}
+.shadowcore-before-after.shadowcore-before-after--h div.shadowcore-before-after-img {
+	background-position: left center;
+}
+.shadowcore-before-after.shadowcore-before-after--v div.shadowcore-before-after-img {
+	background-position: center top;
+}
+.shadowcore-before-after div.shadowcore-after-img-wrap {
+	width: 50%;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: nowrap;
+}
+.shadowcore-before-after div.shadowcore-after-img {
+	width: 100%;
+	background: no-repeat center;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.shadowcore-before-after div.shadowcore-after-img img {
+	display: block;
+	max-width: none;
+}
+.shadowcore-before-after-divider {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+}
+.shadowcore-before-after-divider:before {
+	content: '';
+	display: none;
+	width: 50px;
+	height: 50px;
+	background: #000000;
+	transform: rotate(45deg);
+	margin: -25px 0 0 -25px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	z-index: 3;
+}
+.shadowcore-before-after-divider svg {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 24px;
+	height: 14px;
+	margin: -7px 0 0 -12px;
+	z-index: 5;
+	display: none;
+}
+.shadowcore-divider-icon--yes .shadowcore-before-after-divider:before,
+.shadowcore-divider-icon--yes .shadowcore-before-after-divider svg {
+	display: block;
+}
+
+/* 07. GRID GALLERIES
+   ------------------ */
+.shadowcore-div-image,
+.shadowcore-grid-image,
+.shadowcore-gallery-image {
+	background: no-repeat center;
+	background-size: cover;
+	transition: transform 0.3s, opacity 0.3s;
+}
+.shadowcore-div-image,
+.shadowcore-gallery-image.shadowcore-lazy,
+.elementor img.shadowcore-lazy,
+img.shadowcore-lazy {
+	transition: transform 0.3s, opacity 0.3s;
+	opacity: 0;
+	transform: scale(1.1);
+	pointer-events: none;
+}
+.shadowcore-div-image.is-loaded,
+.shadowcore-gallery-image.shadowcore-lazy.is-loaded,
+.elementor img.shadowcore-lazy.is-loaded,
+img.shadowcore-lazy.is-loaded {
+	opacity: 1;
+	transform: scale(1);
+	pointer-events: auto;
+}
+
+/* --- BrickWall Styles --- */
+.brickwall-grid {
+	position: relative;
+}
+.brickwall-grid > div {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.brickwall-grid > div.is-appended,
+.brickwall-grid > div.is-prepended {
+	transform: scale(0);
+}
+.brickwall-grid:not(.animation--none) > div.brickwall-item {
+	transition: transform 0.4s, opacity 0.4s;
+	will-change: transform, opacity;
+}
+.brickwall-grid.animation--slow > div.brickwall-item {
+	transition: transform 0.8s, opacity 0.8s;
+	will-change: transform, opacity;
+}
+
+/* --- Grid Gallery --- */
+.shadowcore-grid-column--1 .shadowcore-grid-item {
+	width: 100%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--2 .shadowcore-grid-item {
+	width: 50%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--3 .shadowcore-grid-item {
+	width: 33.33%;
+	box-sizing: border-box;
+}
+.shadowcore-grid-column--4 .shadowcore-grid-item {
+	width: 25%;
+	box-sizing: border-box;
+}
+.shadowcore-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+.shadowcore-gallery-item__inner {
+	position: relative;
+	overflow: hidden;
+}
+.shadowcore-grid-item a {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+}
+.elementor-editor-active .shadowcore-grid-item a {
+	pointer-events: none;
+}
+.shadowcore-grid-item img {
+	display: block;
+	margin: 0 auto;
+	transition: transform 0.3s;
+	transform-origin: 50% 100%;
+}
+.shadowcore-gallery-image {
+	transform-origin: 50% 100%;
+}
+.shadowcore-gallery-item__inner:hover .shadowcore-gallery-image,
+.shadowcore-gallery-item__inner:hover img {
+	transform: scale(1.05);
+}
+.shadowcore-grid-caption--none .shadowcore-grid-caption {
+	display: none;
+}
+.shadowcore-grid-caption--under .shadowcore-grid-caption {
+	display: block;
+}
+.shadowcore-grid-caption--on_hover .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo .shadowcore-grid-caption {
+	position: absolute;
+	left: 0;
+	width: 100%;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-caption-valign--top .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-caption-valign--top .shadowcore-grid-caption {
+	top: 0;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-caption-valign--middle .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-caption-valign--middle .shadowcore-grid-caption {
+	top: 50%;
+	transform: translateY(-50%);
+}
+.shadowcore-grid-caption--on_hover.shadowcore-caption-valign--bottom .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-caption-valign--bottom .shadowcore-grid-caption {
+	bottom: 0;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-stretch-caption--yes .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-stretch-caption--yes .shadowcore-grid-caption {
+	top: 0;
+	height: 100%;
+	display: flex;
+}
+.shadowcore-caption-halign--left .shadowcore-grid-caption {
+	text-align: left;
+}
+.shadowcore-caption-halign--center .shadowcore-grid-caption {
+	text-align: center;
+}
+.shadowcore-caption-halign--right .shadowcore-grid-caption {
+	text-align: right;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-stretch-caption--yes.shadowcore-caption-halign--left .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-stretch-caption--yes.shadowcore-caption-halign--left .shadowcore-grid-caption {
+	justify-content: flex-start;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-stretch-caption--yes.shadowcore-caption-halign--center .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-stretch-caption--yes.shadowcore-caption-halign--center .shadowcore-grid-caption {
+	justify-content: center;
+}
+.shadowcore-grid-caption--on_hover.shadowcore-stretch-caption--yes.shadowcore-caption-halign--right .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_photo.shadowcore-stretch-caption--yes.shadowcore-caption-halign--right .shadowcore-grid-caption {
+	justify-content: flex-end;
+}
+.shadowcore-grid-caption--on_hover .shadowcore-grid-caption {
+	transition: opacity 0.3s;
+	opacity: 0;
+}
+.shadowcore-grid-caption--on_hover .shadowcore-justified-gallery a:hover .shadowcore-grid-caption,
+.shadowcore-grid-caption--on_hover .shadowcore-gallery-item__inner:hover .shadowcore-grid-caption {
+	opacity: 1;
+}
+
+/* --- Justified Gallery --- */
+.shadowcore-justified-gallery a {
+	position: relative;
+	display: block;
+}
+.shadowcore-justified-gallery.justified-gallery > .entry-visible > img, 
+.shadowcore-justified-gallery.justified-gallery > .entry-visible > a > img {
+	transition: transform 0.5s, opacity 0.5s;
+}
+.shadowcore-justified-gallery a:hover .shadowcore-gallery-image,
+.shadowcore-justified-gallery a:hover img {
+	transform: scale(1.05);
+}
+.elementor-editor-active .shadowcore-justified-gallery a {
+	pointer-events: none;
+}
+
+/* --- Bricks Gallery --- */
+.shadowcore-gallery-bricks {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.shadowcore-gallery-bricks .shadowcore-gallery-item img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.shadowcore-bricks-layout--1x2 .shadowcore-gallery-bricks .shadowcore-gallery-item:nth-child(3n) {
+	width: 100%;
+}
+.shadowcore-bricks-layout--2x3 .shadowcore-gallery-bricks .shadowcore-gallery-item.is-large,
+.shadowcore-bricks-layout--1x2 .shadowcore-gallery-bricks .shadowcore-gallery-item {
+	width: 50%;
+}
+.shadowcore-bricks-layout--2x3 .shadowcore-gallery-bricks .shadowcore-gallery-item.is-small {
+	width: 33.33%;
+}
+
+/* --- Adjusted Gallery --- */
+.shadowcore-gallery-adjusted .shadowcore-grid-item {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* 08. KENBURNS GALLERY
+   -------------------- */
+.elementor-widget-shadow-gallery-kenburns.shadowcore-kenburns-height--screen .shadowcore-kenburns-wrap {
+    height: 100vh;
+}
+.shadowcore-kenburns,
+.shadowcore-kenburns > div,
+.shadowcore-kenburns > div > .shadowcore-kenburns-slide-image,
+.shadowcore-kenburns-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.shadowcore-kenburns > div > .shadowcore-kenburns-slide-image {
+    z-index: 1;
+}
+.shadowcore-kenburns-overlay {
+    background-color: rgba(0,0,0,0.3);
+    display: none;
+    z-index: 3;
+}
+.shadowcore-kenburns-overlay--yes .shadowcore-kenburns-overlay {
+    display: block;
+}
+.shadowcore-kenburns-wrap {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+.shadowcore-kenburns-wrap .shadowcore-kenburns-title {
+    display: none;
+    will-change: transform, opacity;
+    position: relative;
+    z-index: 5;
+    box-sizing: border-box;
+}
+.shadowcore-kenburns-description {
+    display: none;
+}
+.shadowcore-kenburns-descr--yes .shadowcore-kenburns-wrap .shadowcore-kenburns-description,
+.shadowcore-kenburns-captions--yes .shadowcore-kenburns-wrap .shadowcore-kenburns-title {
+    display: block;
+}
+.shadowcore-kenburns {
+	overflow: hidden;
+}
+.shadowcore-kenburns > div {
+	opacity: 0;
+    will-change: opacity;
+    display: flex;
+}
+.shadowcore-kenburns > div > .shadowcore-kenburns-slide-image {
+	background: no-repeat center;
+	background-size: cover;
+    will-change: transform;
+}
+.shadowcore-kenburns > div.is-active {
+	opacity: 1;
+}
+
+/* 09. SLIDE GALLERY
+   ------------------ */
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-height--screen .shadowcore-slider-wrap {
+    height: 100vh;
+    position: relative;
+}
+.shadowcore-slider-wrap {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.shadowcore-slider {
+    cursor: grab;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.shadowcore-slider.is-grabbed {
+    cursor: grabbing;
+}
+.shadowcore-slider-item {
+    overflow: hidden;
+    display: flex;
+}
+.shadowcore-slider-item--image,
+.shadowcore-slider-overlay,
+.shadowcore-slider-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.shadowcore-slider-overlay {
+    pointer-events: none;
+    z-index: 5;
+}
+.shadowcore-slider-item--image {
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.shadowcore-slider-title {
+    pointer-events: none;
+    position: relative;
+    z-index: 7;
+    display: none;
+}
+.shadowcore-slider-description {
+    display: none;
+}
+
+.shadowcore-slider-captions--yes .shadowcore-slider-title,
+.shadowcore-slider-descr--yes .shadowcore-slider-description {
+    display: block;
+}
+.shadowcore-slider .shadowcore-slider-item {
+    will-change: opacity, transform;
+}
+.shadowcore-slider .shadowcore-slider-item .shadowcore-slider-item--image {
+    will-change: transform;
+}
+
+/* Fitting Type */
+.shadowcore-slider--cover .shadowcore-slider-item .shadowcore-slider-item--image{
+    background-size: cover;
+}
+.shadowcore-slider--fit-all .shadowcore-slider-item .shadowcore-slider-item--image{
+    background-size: contain;
+}
+.shadowcore-slider--fit-h .shadowcore-slider-item .shadowcore-slider-item--image{
+    background-size: 100% auto;
+}
+.shadowcore-slider--fit-v .shadowcore-slider-item .shadowcore-slider-item--image{
+    background-size: auto 100%;
+}
+
+/* Slides */
+.shadowcore-slider.ia-animating .shadowcore-slider-item {
+    transition-timing-function: ease-in-out;
+}
+.shadowcore-slider.ia-animating.is-dropped .shadowcore-slider-item {
+    transition-timing-function: ease-out;
+}
+.shadowcore-slider[data-type="simple"] .shadowcore-slider-item,
+.shadowcore-slider[data-type="parallax"] .shadowcore-slider-item {
+    display: none;
+}
+.shadowcore-slider[data-type="simple"] .shadowcore-slider-item.is-active,
+.shadowcore-slider[data-type="parallax"] .shadowcore-slider-item.is-active {
+    display: flex;
+}
+.shadowcore-slider[data-type="fade"] .shadowcore-slider-item {
+    opacity: 0;
+}
+.shadowcore-slider[data-type="fade"] .shadowcore-slider-item.is-active {
+    opacity: 1;
+}
+
+/* Navigation Elements */
+.shadowcore-slider-wrap .shadowcore-slider-nav {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 8;
+}
+.shadowcore-slider-wrap .shadowcore-slider-nav a {
+    display: block;
+    transition: color 0.3s;
+    pointer-events: all;
+}
+.shadowcore-slider-wrap .shadowcore-slider-nav .shadowcore-slider-dots a {
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.shadowcore-slider-dots {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.shadowcore-slider-dots a.shadowcore-slider-dot {
+    background: #ffffff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: block;
+}
+
+/* Navigation Position */
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--top .shadowcore-slider-nav {
+    align-items: flex-start;
+}
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--middle .shadowcore-slider-nav {
+    align-items: center;
+}
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--bottom .shadowcore-slider-nav {
+    align-items: flex-end;
+}
+
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--left .shadowcore-slider-nav {
+    justify-content: flex-start;
+}
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--center .shadowcore-slider-nav--dots .shadowcore-slider-nav {
+    justify-content: center;
+}
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--right .shadowcore-slider-nav {
+    justify-content: flex-end;
+}
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--center .shadowcore-slider-nav--arrows .shadowcore-slider-nav,
+.elementor-widget-shadow-gallery-slider.shadowcore-slider-nav--center .shadowcore-slider-nav--text .shadowcore-slider-nav {
+    justify-content: space-between;
+}
+
+/* 10. RIBBON GALLERY
+   ------------------ */
+.shadowcore-ribbon-wrap {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.shadowcore-ribbon {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    min-width: 100%;
+	cursor: grab;
+}
+.shadowcore-ribbon.is-grabbed {
+	cursor: grabbing;
+}
+.shadowcore-ribbon.is-moving .shadowcore-ribbon-item--image a {
+	pointer-events: none;
+}
+.shadowcore-ribbon-item {
+    position: relative;
+}
+.shadowcore-ribbon-overlay,
+.shadowcore-ribbon-title-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+	pointer-events: none;
+}
+.shadowcore-ribbon-overlay {
+    z-index: 3;
+	display: none;
+	background: #0000001e;
+}
+.shadowcore-ribbon-overlay--yes .shadowcore-ribbon-overlay {
+	display: block;
+}
+.shadowcore-ribbon-title-wrap {
+    z-index: 5;
+	display: flex;
+}
+.shadowcore-ribbon-title,
+.shadowcore-ribbon-description {
+	display: none;
+}
+.shadowcore-ribbon-captions--yes .shadowcore-ribbon-title,
+.shadowcore-ribbon-descr--yes .shadowcore-ribbon-description {
+    display: block;
+}
+.shadowcore-ribbon-item--image {
+	background: no-repeat center;
+	background-size: cover;
+}
+.shadowcore-ribbon-item--image a {
+	pointer-events: auto;
+	display: block;
+}
+.shadowcore-ribbon-item--image img {
+	display: block;
+	height: 100%;
+	width: auto;
+}
+
+/* 11. PRICE TABLE ITEM
+   -------------------- */
+.shadowcore-price-item {
+	position: relative;
+}
+div.shadowcore-price-item-popular {
+	position: absolute;
+	z-index: 33;
+}
+.shadowcore-price-item--head,
+.shadowcore-price-item--footer,
+.shadowcore-price-item--price-wrap {
+	display: flex;
+}
+.shadowcore-price-item--head {
+	flex-direction: column;
+}
+.shadowcore-price-item-head-swap--yes .shadowcore-price-item--head {
+	flex-direction: column-reverse;
+}
+.shadowcore-price-item-button {
+	transition: all 0.3s;
+}
+
+/* Most Popular Label */
+.shadowcore-price-item-mp-label-wrap {
+	position: absolute;
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	display: flex;
+	width: 100%;
+}
+
+/* Heading and Proce Layout */
+.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	flex-direction: row;
+}
+.shadowcore-price-item-price-layout--vertical .shadowcore-price-item--price-wrap {
+	flex-direction: column;
+}
+.shadowcore-price-item-price-swap--yes.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	flex-direction: row-reverse;
+}
+.shadowcore-price-item-price-swap--yes.shadowcore-price-item-price-layout--vertical .shadowcore-price-item--price-wrap {
+	flex-direction: column-reverse;
+}
+
+.shadowcore-price-item-valign--top.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	align-items: flex-start;
+}
+.shadowcore-price-item-valign--center.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	align-items: center;
+}
+.shadowcore-price-item-valign--bottom.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	align-items: flex-end;
+}
+
+.shadowcore-price-item-price-swap--yes.shadowcore-price-item-halign--right.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap,
+.shadowcore-price-item-halign--left.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	justify-content: flex-start;
+}
+.shadowcore-price-item-halign--center.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	justify-content: center;
+}
+.shadowcore-price-item-price-swap--yes.shadowcore-price-item-halign--left.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap,
+.shadowcore-price-item-halign--right.shadowcore-price-item-price-layout--horizontal .shadowcore-price-item--price-wrap {
+	justify-content: flex-end;
+}
+
+.shadowcore-price-item-halign--left.shadowcore-price-item-price-layout--vertical .shadowcore-price-item--price-wrap {
+	align-items: flex-start;
+}
+.shadowcore-price-item-halign--center.shadowcore-price-item-price-layout--vertical .shadowcore-price-item--price-wrap {
+	align-items: center;
+}
+.shadowcore-price-item-halign--right.shadowcore-price-item-price-layout--vertical .shadowcore-price-item--price-wrap {
+	align-items: flex-end;
+}
+
+/* Features List */
+.shadowcore-price-item--list {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-price-item--list li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	display: flex;
+}
+.shadowcore-price-item--list li i {
+	display: block;
+}
+
+
+/* 12. CARDS CAROUSEL
+   ------------------ */
+.owl-item.cloned .shadowcore-div-image {
+	opacity: 1;
+	transform: scale(1);
+}
+.shadowcore-carousel-card,
+.shadowcore-carousel-card__content {
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-cards-carousel-image-swap--yes .shadowcore-carousel-card,
+.shadowcore-cards-carousel-heading-swap--yes .shadowcore-carousel-card__content {
+	flex-direction: column-reverse;
+}
+
+/* 13. UNI POSTS GRID
+   ------------------ */
+.shadowcore-posts-grid {
+	display: grid;
+}
+
+.shadowcore-posts-grid > div {
+	position: relative;
+}
+.shadowcore-posts-grid > div.not-loaded {
+	opacity: 0!important;
+}
+.shadowcore-posts-grid > div a.shadowcore-pgi-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.shadowcore-posts-grid--item {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	will-change: opacity, transform;
+	transition: opacity 0.3s, transform 0.3s;
+}
+.shadowcore-pgi__content {
+	width: 100%;
+	overflow: hidden;
+}
+.shadowcore-pgi__content_head {
+	display: flex;
+	flex-direction: column;
+}
+.shadowcore-pgi__title {
+	font-size: 24px;
+	line-height: 1.5;
+}
+.shadowcore-pgi__meta {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	flex-direction: row;
+	font-size: 14px;
+	line-height: 1.5;
+}
+.shadowcore-pgi__excerpt {
+	width: 100%;
+}
+.shadowcore-pgi__excerpt:empty {
+	display: none;
+}
+
+/* Custom Template */
+.shadowcore-pgi-custom-content--none .shadowcore-posts-grid--custom .shadowcore-pgi__content {
+	display: none;
+}
+.shadowcore-pgi-custom-content--below .shadowcore-posts-grid--custom .shadowcore-posts-grid--item {
+	flex-direction: column;
+}
+.shadowcore-pgi-custom-content--above .shadowcore-posts-grid--custom .shadowcore-posts-grid--item {
+	flex-direction: column-reverse;
+}
+.shadowcore-pgi-custom-content--top .shadowcore-posts-grid--custom .shadowcore-pgi__content {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.shadowcore-pgi-custom-content--bottom .shadowcore-posts-grid--custom .shadowcore-pgi__content {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.shadowcore-pgi-custom-content--top .shadowcore-posts-grid--custom .no-image .shadowcore-pgi__content,
+.shadowcore-pgi-custom-content--bottom .shadowcore-posts-grid--custom .no-image .shadowcore-pgi__content {
+	position: static;
+}
+
+.shadowcore-pgi-custom-align--left .shadowcore-posts-grid--custom .shadowcore-pgi__content_head {
+	align-items: flex-start;
+}
+.shadowcore-pgi-custom-align--left .shadowcore-posts-grid--custom .shadowcore-pgi__excerpt {
+	text-align: left;
+}
+.shadowcore-pgi-custom-align--center .shadowcore-posts-grid--custom .shadowcore-pgi__content_head {
+	align-items: center;
+}
+.shadowcore-pgi-custom-align--center .shadowcore-posts-grid--custom .shadowcore-pgi__excerpt {
+	text-align: center;
+}
+.shadowcore-pgi-custom-align--right .shadowcore-posts-grid--custom .shadowcore-pgi__content_head {
+	align-items: flex-end;
+}
+.shadowcore-pgi-custom-align--right .shadowcore-posts-grid--custom .shadowcore-pgi__excerpt {
+	text-align: right;
+}
+
+.shadowcore-pgi-custom-swap--yes .shadowcore-posts-grid--custom .shadowcore-pgi__content_head {
+	flex-direction: column-reverse;
+}
+
+/* Default Template */
+.shadowcore-pgi-content--none .shadowcore-posts-grid--default .shadowcore-pgi__content {
+	display: none;
+}
+.shadowcore-pgi-content--below .shadowcore-posts-grid--default .shadowcore-posts-grid--item {
+	flex-direction: column;
+}
+.shadowcore-pgi-content--above .shadowcore-posts-grid--default .shadowcore-posts-grid--item {
+	flex-direction: column-reverse;
+}
+.shadowcore-pgi-content--top .shadowcore-posts-grid--default .shadowcore-pgi__content {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.shadowcore-pgi-content--bottom .shadowcore-posts-grid--default .shadowcore-pgi__content {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.shadowcore-pgi-custom-content--top .shadowcore-posts-grid--default .no-image .shadowcore-pgi__content,
+.shadowcore-pgi-custom-content--bottom .shadowcore-posts-grid--default .no-image .shadowcore-pgi__content {
+	position: static;
+}
+
+.shadowcore-pgi-default-align--left .shadowcore-posts-grid--default .shadowcore-pgi__content_head {
+	align-items: flex-start;
+}
+.shadowcore-pgi-default-align--left .shadowcore-posts-grid--default .shadowcore-pgi__excerpt {
+	text-align: left;
+}
+.shadowcore-pgi-default-align--center .shadowcore-posts-grid--default .shadowcore-pgi__content_head {
+	align-items: center;
+}
+.shadowcore-pgi-default-align--center .shadowcore-posts-grid--default .shadowcore-pgi__excerpt {
+	text-align: center;
+}
+.shadowcore-pgi-default-align--right .shadowcore-posts-grid--default .shadowcore-pgi__content_head {
+	align-items: flex-end;
+}
+.shadowcore-pgi-default-align--right .shadowcore-posts-grid--default .shadowcore-pgi__excerpt {
+	text-align: right;
+}
+
+.shadowcore-pgi-default-swap--yes .shadowcore-posts-grid--default .shadowcore-pgi__content_head {
+	flex-direction: column-reverse;
+}
+
+.shadowcore-pgi--button-wrap {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+.shadowcore-pgi--button-wrap a {
+	display: block;
+	transition: all 0.3s;
+}
+.shadowcore-pgi--button-wrap a.all-posts-loaded {
+	transition: none;
+}
+.shadowcore-pgi--button-wrap a.is-processing {
+	opacity: 0.5;
+	pointer-events: none;
+	cursor: progress;
+}
