@@ -1483,6 +1483,11 @@ header#ashade-header .ashade-header-inner {
 		width:65%;
 	}
 }
+@media (max-width:767px){
+	.ashade-content-scroll{
+		margin-top: 105px;
+	}
+}
 /* --- Navigation --- */
 nav.ashade-mob-nav,
 .ashade-hide-menu #ashade-header .ashade-nav-block .ashade-mobile-header,
