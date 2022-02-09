@@ -1014,33 +1014,7 @@ ashade.init = function() {
             ');
         }
         
-		mobile_menu.find('ul.main-menu a').on('click', function(e) {
-			var $this = jQuery(this),
-				$parent = $this.parent();
-			if ($parent.hasClass('menu-item-has-children') || $parent.find('ul').length) {
-				e.preventDefault();
-				$parent.children('ul').slideToggle(300).toggleClass('is-open');
-			}
-		});
-		mobile_menu.find('ul.sub-menu').slideUp(1);
-		mobile_menu.find("li.menu-item-has-children").each(function(){
-			let $li = jQuery(this),
-				$a = $li.children("a");
-
-			if ( $a.attr('href').indexOf('http') > -1 ) {
-				$a.attr( "data-href", $a.attr("href") ).attr( "href", "javascript:void(0)" );
-				$a[0].addEventListener("touchstart", function(event) {
-					if( ! ashade.tapedTwice ) {
-	        			ashade.tapedTwice = true;
-	        			setTimeout( function() { ashade.tapedTwice = false; }, 300 );
-	        			return false;
-	    			}
-	    			event.preventDefault();
-	   				//action on double tap goes below
-	    			$a.attr('href', $a.attr('data-href')).trigger('click');
-				});
-			}
-		});
+	
 	}
 	
 	mobile_menu_button.on('click', function() {
