@@ -979,19 +979,7 @@ ashade.init = function() {
 		ashade_mobile_header.prepend($ashade_header.find('.ashade-wc-header-cart').clone());
 	}
 	
-	if ($ashade_body.hasClass('ashade-albums-back')) {
-		let $ashade_mobile_back = jQuery('\
-			<a href="javascript:void(0)" class="ashade-mobile-back">\
-				<svg xmlns="http://www.w3.org/2000/svg" width="9.844" height="17.625" viewBox="0 0 9.844 17.625">\
-					<path d="M2.25-17.812l1.125,1.125L-4.359-9,3.375-1.312,2.25-.187-6-8.437-6.469-9-6-9.562Z" transform="translate(6.469 17.813)" fill="#ffffff"/>\
-				</svg>\
-			</a>');
-		$ashade_mobile_back.on('click', function(e) {
-			e.preventDefault();
-			ashade.change_location('history.back');
-		});
-		ashade_mobile_header.prepend($ashade_mobile_back);
-	}
+
 
 	$ashade_header.find('.ashade-nav-block').append(ashade_mobile_header);
 	
