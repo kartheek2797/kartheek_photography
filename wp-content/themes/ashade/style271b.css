@@ -844,7 +844,7 @@ nav.ashade-mobile-menu ul.main-menu > li > a,
 .ashade-back span:last-child,
 .ashade-progress-counter,
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -1153,7 +1153,7 @@ input[type="submit"] {
     width: auto;
     padding: 15px 40px 15px 40px;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -2124,7 +2124,7 @@ footer#ashade-footer a {
     font-size: 12px;
     line-height: 20px;
     font-weight: 700;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif !important;
     letter-spacing: 0.6px;
     padding: 25px 50px 26px 50px;
 }
@@ -4738,7 +4738,7 @@ a.ashade-category-more {
 	justify-content: flex-end;
 }
 .ashade-comment-tools a {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 700;
 	font-size: 12px;
 	line-height: 20px;
