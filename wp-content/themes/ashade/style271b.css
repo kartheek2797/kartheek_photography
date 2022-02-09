@@ -1473,6 +1473,16 @@ header#ashade-header .ashade-header-inner {
 	width: 100%;
 	height: auto;
 }
+@media (min-width:760px) and (max-width:960px){
+	.ashade-logo img{
+		width:11vh;
+	}
+}
+@media (max-width:760px){
+	.ashade-logo img{
+		width:65%;
+	}
+}
 /* --- Navigation --- */
 nav.ashade-mob-nav,
 .ashade-hide-menu #ashade-header .ashade-nav-block .ashade-mobile-header,
