@@ -153,7 +153,7 @@ html.no-admin-bar {
 body {
     overflow-x: hidden;
     background: #000000;
-    font-family: 'Montserrat', sans-serif !impotant;
+    font-family: 'Montserrat', sans-serif !important;
     font-size: 16px;
     line-height: 28px;
 	font-weight: 500;
