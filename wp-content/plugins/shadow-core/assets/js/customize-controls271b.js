@@ -731,14 +731,7 @@ jQuery(document).ready(function() {
 				}, 50);
 			});
 			
-			// Change Link Target
-			$control.on('click', '.cc-socials-target', function(e) {
-				e.preventDefault();
-				jQuery(this).attr('data-target', jQuery(this).attr('data-target') == 'blank' ? 'self' : 'blank');
-				setTimeout(function() {
-					$control.save();
-				}, 50);
-			});
+			
 			
 			// Select Item Type
 			$control.on('change', 'select', function() {
